@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="icon" href="src/assets/dog-logo.png">
+  
+  <title>Mundo Pet</title>
+  
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo"><img src="src/assets/dog-logo.png" alt="Logo"> MUNDO PET</div>
+</header>
+
+<main class="container">
+
+  <div class="header-content">
+    <div>
+      <h1>Sua agenda</h1>
+      <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+    </div>
+
+    <div class="date">
+      <i><img src="src/assets/Calendar-Minimalistic.png" alt="Calendário" /></i>
+      <input type="date" id="date" name="date" required />
+    </div>
+  </div>
+
+<!-- MANHÃ -->
+<section class="card schedule-period">
+  <div class="card-header">
+    <span>
+      <img src="src/assets/Sun.png" alt="sol-manhã">
+      Manhã
+    </span>
+    <span>09h-12h</span>
+  </div>
+
+  <ul id="period-morning" class="period">
+    <!--
+    <li class="item">
+      <span class="time">09:00</span>
+      <span class="pet">Thor <small>/ Fernanda Costa</small></span>
+      <span class="service">Vacinação</span>
+      <span class="remove">Remover agendamento</span>
+    </li>
+    -->
+  </ul>
+  
+</section>
+
+<!-- TARDE -->
+<section class="card schedule-period">
+  <div class="card-header">
+    <span>
+      <img src="src/assets/Sun-afternoon.png" alt="Tarde">
+      Tarde
+    </span>
+    <span>13h-18h</span>
+  </div>
+
+  <ul id="period-afternoon" class="period">
+    <!--
+    <li class="item">
+      <span class="time">13:00</span>
+      <span class="pet">Mel <small>/ João Souza</small></span>
+      <span class="service">Corte de Unhas</span>
+      <span class="remove">Remover agendamento</span>
+    </li>
+    -->
+  </ul>
+</section>
+
+<!-- NOITE -->
+<section class="card schedule-period">
+  <div class="card-header">
+    <span>
+      <img src="src/assets/Moon-Night.png" alt="Noite">
+      Noite
+    </span>
+    <span>19h-21h</span>
+  </div>
+
+  <ul id="period-night" class="period">
+    <!--
+    <li class="item">
+      <span class="time">20:00</span>
+      <span class="pet">Max <small>/ Camila Santos</small></span>
+      <span class="service">Limpeza de Dentes</span>
+      <span class="remove">Remover agendamento</span>
+    </li>
+    -->
+  </ul>
+</section>
+
+</main>
+
+<button class="btn" id="openModal">NOVO AGENDAMENTO</button>
+
+<!-- MODAL -->
+<div class="modal-overlay hidden">
+  <div class="modal">
+
+    <button class="close-modal">✕</button>
+
+    <h2>Agende um atendimento</h2>
+    <p class="subtitle">
+      Preencha os dados do cliente para realizar o agendamento:
+    </p>
+
+    <form class="form">
+
+      <label>Nome do tutor</label>
+      <input type="text" placeholder="Helena Souza" id="name-tutor">
+
+      <label>Nome do pet</label>
+      <input type="text" placeholder="Cheddar" id="name-pet">
+
+      <label>Telefone</label>
+      <input type="text" placeholder="(00) 0 0000-0000" id="telefone">
+
+      <label>Descrição do serviço</label>
+      <textarea placeholder="Banho e tosa" id="service"></textarea>
+
+      <div class="row">
+        <div class="field" class="date">
+          <input type="date" id="dateForm" name="date" required />
+        </div>
+
+        <div class="field">
+          <select id="hora">
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+            <option value="21:00">21:00</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-modal">
+        AGENDAR
+      </button>
+
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

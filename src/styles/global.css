@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f1220;
+  color: #fff;
+}
+
+/* TOPO */
+.topbar {
+  padding: 20px;
+}
+
+.logo {
+  background: #1b1f38;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #a78bfa;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+p {
+  color: #9ca3af;
+  margin-top: 5px;
+}
+
+/* DATA */
+.date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #1b1f38;
+  border: 1px solid #2a2f4a;
+  border-radius: 10px;
+
+  padding: 10px 12px;
+  width: fit-content;
+}
+
+.date img {
+  width: 18px;
+  height: 18px;
+}
+
+.date input {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.date input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* CARD */
+.card {
+  background: #1b1f38;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #cbd5e1;
+}
+
+/* ITEM */
+.item {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr 200px;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px solid #2a2f4a;
+}
+
+.item:first-of-type {
+  border-top: none;
+}
+
+.time {
+  font-weight: bold;
+}
+
+.pet small {
+  color: #9ca3af;
+}
+
+.service {
+  color: #cbd5e1;
+}
+
+.remove {
+  color: #6b7280;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* BOTÃO */
+.btn {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+}
