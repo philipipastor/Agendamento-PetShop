@@ -11,5 +11,7 @@ import "./modules/form/validaForm.js"
 
 import "./modules/agendamentos/load.js"
 import "./modules/agendamentos/remove-agendamento.js"
-import "./modules/form/horario-clicado.js"
+import "./modules/form/hours-form/horario-clicado.js"
+
+
 
