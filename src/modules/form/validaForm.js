@@ -1,12 +1,9 @@
 import dayjs from "dayjs"
-import { horarioLivre } from "../../utils/horariofuncionamento.js"
-import { agendamento } from "../../services/agendamento-novo.js"
-import { getFormData } from "../../utils/getFormData.js"
-import { limpaForm } from "./limpa-form.js"
-import { validarHorario } from "./valida-horario.js"
-import { fechaModal } from "./modal.js"
 
-const selectDate = document.querySelector("#dateForm")
+import { limpaForm } from "./limpa-form.js"
+import { horarioOcupado } from "./hours-form/horario-ocupado.js"
+import { criaAgendamento } from "../agendamentos/cria-agendamento.js"
+
 const modal = document.querySelector(".modal-overlay")
 
 class ValidaForm{
@@ -26,21 +23,9 @@ class ValidaForm{
             if(this.numTel()) return;
             if(this.service()) return;
 
-            const dados = getFormData(this.formulario)
+            if(await horarioOcupado()) return;
 
-            const ocupado = await validarHorario(selectDate.value,dados.hora)
-
-            if(ocupado){
-                alert("Esse horário já está ocupado! Escolha outro")
-                return
-            }
-
-            await agendamento(dados.nome, 
-                dados.nomePet, 
-                dados.telefone, 
-                dados.servico, 
-                dados.data,
-                dados.hora)
+            await criaAgendamento()
 
             limpaForm(this.formulario)
 
