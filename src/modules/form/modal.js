@@ -10,3 +10,5 @@ closeModal.addEventListener("click", () =>{
     modal.classList.add("hidden")
 })
 
+
+

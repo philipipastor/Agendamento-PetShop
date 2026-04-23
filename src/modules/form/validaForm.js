@@ -4,8 +4,10 @@ import { agendamento } from "../../services/agendamento-novo.js"
 import { getFormData } from "../../utils/getFormData.js"
 import { limpaForm } from "./limpa-form.js"
 import { validarHorario } from "./valida-horario.js"
+import { fechaModal } from "./modal.js"
 
 const selectDate = document.querySelector("#dateForm")
+const modal = document.querySelector(".modal-overlay")
 
 class ValidaForm{
     constructor(){
@@ -41,6 +43,8 @@ class ValidaForm{
                 dados.hora)
 
             limpaForm(this.formulario)
+
+            modal.classList.add("hidden")
 
         })  
         
