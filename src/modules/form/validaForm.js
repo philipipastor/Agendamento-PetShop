@@ -3,6 +3,7 @@ import dayjs from "dayjs"
 import { limpaForm } from "./limpa-form.js"
 import { horarioOcupado } from "./hours-form/horario-ocupado.js"
 import { criaAgendamento } from "../agendamentos/cria-agendamento.js"
+import { atualizaAgendamento } from "../agendamentos/load.js"
 
 const modal = document.querySelector(".modal-overlay")
 
@@ -26,6 +27,8 @@ class ValidaForm{
             if(await horarioOcupado()) return;
 
             await criaAgendamento()
+
+            atualizaAgendamento()
 
             limpaForm(this.formulario)
 

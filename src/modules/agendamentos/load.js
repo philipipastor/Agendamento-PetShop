@@ -3,16 +3,16 @@ import { fetchDate } from "../../services/busca-data.js"
 
 const selectDate = document.querySelector("#date")
 
-export function eventoData() {
-    
-    selectDate.addEventListener("change", async () => {
-       
-        const date = selectDate.value
+export async function atualizaAgendamento(){
+    const date = selectDate.value
 
-        const dadosAgendamento = await fetchDate({ date })
+    const dadosAgendamento = await fetchDate({ date })
         
-        periodo(dadosAgendamento)
-    })
+    periodo(dadosAgendamento)
 }
+    
+selectDate.addEventListener("change", async () => {
+       await atualizaAgendamento()
+})
 
-eventoData()
+
