@@ -1,4 +1,5 @@
 import { deleteAgendamento } from "../../services/cancel.js"
+import { atualizaAgendamento } from "./load.js"
 
 const lista = document.querySelectorAll(".period")
 
@@ -17,7 +18,7 @@ lista.forEach(element => {
 
                 if(isConfirm){
                     await deleteAgendamento({id})
-                    item.remove()
+                    await atualizaAgendamento()
                 }
             }
             
